@@ -1,0 +1,33 @@
+
+server.servlet.context-path=/testssl
+server.port=5555
+
+##----------------- test enable https -----------------------
+#server.port: 443
+#server.ssl.enabled: true
+#server.ssl.key-store-password: P@ssw0rd
+#server.ssl.key-store: classpath:keystore/mcbwuat01.pfx
+#server.ssl.key-store-type: PKCS12
+#server.ssl.ciphers: TLS_RSA_WITH_AES_128_CBC_SHA256
+#server.ssl.protocol: TLS
+#server.ssl.enabled-protocols: TLSv1.2
+
+
+
+
+##-------------------- test self sign cer -----------------------------
+##ref: https://www.baeldung.com/spring-boot-https-self-signed-certificate
+#server.security.require-ssl=true
+#server.port=443
+#server.ssl.key-store-type=PKCS12
+#server.ssl.key-store=classpath:keystore/mcbKeystore.p12
+#server.ssl.key-store-password=password
+#server.ssl.key-alias=mcbKeystore
+
+##ssl ciphers
+#server.ssl.ciphers=TLS_RSA_WITH_AES_128_CBC_SHA256, INCLUDE_ANY_OTHER_ONES_YOU_NEED_TO_SUPPORT
+#server.ssl.enabled=true
+## SSL protocol to use.
+#server.ssl.protocol=TLS
+## Enabled SSL protocols.
+#server.ssl.enabled-protocols=TLSv1.2
